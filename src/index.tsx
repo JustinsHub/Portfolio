@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Console from './components/Console';
 import './index.css';
 import Portfolio from './Portfolio';
 import reportWebVitals from './reportWebVitals';
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <Portfolio />
-  </React.StrictMode>
+  );
+  root.render(
+    <>
+      <Console/>
+    <React.StrictMode>
+      <Portfolio/>
+    </React.StrictMode>
+    </>
 );
 
 // If you want to start measuring performance in your app, pass a function
