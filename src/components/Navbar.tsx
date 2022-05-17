@@ -10,37 +10,30 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
+import { styled } from "@mui/system";
+
+const NavbarTypography = styled(Typography)({
+    cursor: "pointer",
+    margin: "1.3rem"
+})
+
 
 const Navbar:React.FC = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 0}}
-          >
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Justin
-          </Typography>
-          <Button color="inherit">About</Button>
-          <Button color="inherit">Skills</Button>
-          <Button color="inherit">Projects</Button>
-          <Button color="inherit">Contact</Button>
+    <Box>
+      <AppBar position="static" color="inherit">
+        <Toolbar
+        sx={{
+            justifyContent: "center"
+        }}
+        >
+          <NavbarTypography>Home</NavbarTypography>
+          <NavbarTypography>About</NavbarTypography>
+          <NavbarTypography>Skills</NavbarTypography>
+          <NavbarTypography>Projects</NavbarTypography>
+          <NavbarTypography>Contact</NavbarTypography>
         </Toolbar>
       </AppBar>
-      <Box sx={{justifyContent: 'flex-end', border: 1 }}>
-            <Button color="inherit">About</Button>
-          <Button color="inherit">Skills</Button>
-          <Button color="inherit">Projects</Button>
-          <Button color="inherit">Contact</Button>
-      </Box>
     </Box>
   );
 }
