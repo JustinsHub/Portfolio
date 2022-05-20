@@ -7,12 +7,12 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { Box, styled } from "@mui/system";
+import ProfileImage from '../styles/images/Picture.jpeg'
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-
 
 const Home: React.FC = () => {
     return (
@@ -57,8 +57,8 @@ const Home: React.FC = () => {
                                 </Box>
                             </Box>
                     </Grid>
-                    <Grid item xs={0} md={6} lg={6}>
-                        Profile Picture
+                    <Grid item xs={12} md={6} lg={6} sx={{display: "flex", justifyContent: "center"}}>
+                       <Box component="img" alt="portfolio picture" src={ProfileImage}></Box>
                     </Grid>
                 </Grid>
             </GlobalBoxWrap>

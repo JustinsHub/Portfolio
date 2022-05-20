@@ -1,10 +1,4 @@
 import React, { useRef, useState } from "react";
-import Home from './Home';
-import About from './About';
-import Skills from './Skills';
-import Projects from './Projects';
-import Contact from './Contact';
-
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
