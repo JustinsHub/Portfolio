@@ -1,9 +1,12 @@
 import React from "react";
+import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 
 const Projects: React.FC = () => {
     return (
         <section>
-            Projects
+             <GlobalBoxWrap>
+                <GlobalSubTitle>Projects</GlobalSubTitle>
+            </GlobalBoxWrap>
         </section>
     )
 }

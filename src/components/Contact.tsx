@@ -1,9 +1,12 @@
 import React from "react";
+import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 
 const Contact: React.FC = () => {
     return (
         <section>
-            Contact
+             <GlobalBoxWrap>
+                <GlobalSubTitle>Contact</GlobalSubTitle>
+            </GlobalBoxWrap>
         </section>
     )
 }

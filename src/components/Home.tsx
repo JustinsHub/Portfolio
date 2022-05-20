@@ -1,35 +1,49 @@
 import { Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
 import React from "react";
+import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 import Navbar from "./Navbar";
+import About from "./About";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Home: React.FC = () => {
-
-    //box each component 25rem height background white grid 6/6
-    //Typeography on home
     return (
         <section>
-            <Navbar/>
             
-            <Box
-             sx={{
-                width: "auto",
-                height: "25rem",
-                backgroundColor: 'lightcoral'
-              }}>
+            <section>
+                <Navbar/>
+            </section>
+            
+            <GlobalBoxWrap>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={6} lg={6}>
 
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6} lg={6}>
+                        <Typography sx={{fontSize: "2.5rem", fontWeight: "800"}}>Justin Zamora</Typography>
+                        <GlobalSubTitle>Software Engineer</GlobalSubTitle>
+                    </Grid>
 
-                    <Typography sx={{fontSize: "2rem", fontWeight: "800"}}>Justin Zamora</Typography>
-                    Software Engineer
+                    <Grid item xs={0} md={6} lg={6}>
+                        Profile Picture
+                    </Grid>
                 </Grid>
+            </GlobalBoxWrap>
 
-                <Grid item xs={0} md={6} lg={6}>
-                    Profile Picture
-                </Grid>
-            </Grid>
-            </Box>
+            <section>
+                <About/>
+            </section>
+
+            <section>
+                <Skills/>
+            </section>
+
+            <section>
+                <Projects/>
+            </section>
+
+            <section>
+                <Contact/>
+            </section>
         </section>
     )
 }
