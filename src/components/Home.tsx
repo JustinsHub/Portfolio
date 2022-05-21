@@ -1,4 +1,4 @@
-import { Grid, Link, Stack, Typography } from "@mui/material";
+import { Grid, Link, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 import Navbar from "./Navbar";
@@ -6,7 +6,7 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import { border, Box, styled } from "@mui/system";
+import {Box, styled } from "@mui/system";
 import ProfileImage from '../styles/images/PortfolioPicture.jpeg'
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -25,6 +25,21 @@ const Home: React.FC = () => {
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} lg={6} sx={{display: "flex", justifyContent: "center"}}>
                             <Box>
+                                <Paper elevation={3} sx={{
+                                    width: "50%", 
+                                    textAlign: "center", 
+                                    padding: "0.5rem",
+                                    backgroundColor: "#dda73b",
+                                    borderRadius: "5rem",
+                                    marginBottom: "1rem"
+                                    }}>
+                                        <Typography sx={{
+                                            color: "white",
+                                            fontWeight: 700
+                                        }}>
+                                            Hello, I'm
+                                        </Typography>
+                                    </Paper>
                                 <Typography sx={{fontSize: "2.5rem", fontWeight: "800"}}>Justin Zamora</Typography>
                                 <GlobalSubTitle>Software Engineer</GlobalSubTitle>
                                 <Box marginTop="2rem">
@@ -34,7 +49,7 @@ const Home: React.FC = () => {
                                             <EmailIcon/>
                                             </Grid>
                                             <Grid item>
-                                            <Typography>contactjustincodes@gmail.com</Typography>
+                                            <Typography fontSize="14px">contactjustincodes@gmail.com</Typography>
                                             </Grid>
                                         </Grid>
                                     </Box>
@@ -44,7 +59,7 @@ const Home: React.FC = () => {
                                             <LocationOnIcon/>
                                             </Grid>
                                             <Grid item>
-                                            <Typography>Los Angeles, CA, United States</Typography>
+                                            <Typography fontSize="14px">Los Angeles, CA, United States</Typography>
                                             </Grid>
                                         </Grid>
                                     </Box>
