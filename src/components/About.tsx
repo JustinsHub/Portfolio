@@ -5,6 +5,16 @@ import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 import AboutImage from '../styles/images/AboutImage.png'
 import DownloadIcon from '@mui/icons-material/Download';
 
+
+
+
+
+//TODO 
+//double border on profile pic
+//About me sizing
+//About me mobile size
+//Download CV library?
+
 const About: React.FC = () => {
     return (
         <section>

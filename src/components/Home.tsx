@@ -21,7 +21,7 @@ const Home: React.FC = () => {
                 <Navbar/>
             </section>
             
-            <GlobalBoxWrap marginTop={7}>
+            <GlobalBoxWrap marginTop={20}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} lg={6} sx={{display: "flex", justifyContent: "center"}}>
                             <Box>
@@ -78,8 +78,7 @@ const Home: React.FC = () => {
                            width: "auto",
                            height: "35%",
                            borderRadius: "50%",
-                           border: 10,
-                           borderColor: "#DADADA"
+                           boxShadow: "0 0 0 1.2rem rgb(198,198,198, 0.6), 0 0 0 2.4rem rgb(218,218,219, 0.5)"
                        }}
                        ></Box>
                     </Grid>
