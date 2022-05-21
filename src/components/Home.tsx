@@ -6,8 +6,8 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import { Box, styled } from "@mui/system";
-import ProfileImage from '../styles/images/Picture.jpeg'
+import { border, Box, styled } from "@mui/system";
+import ProfileImage from '../styles/images/PortfolioPicture.jpeg'
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -58,7 +58,15 @@ const Home: React.FC = () => {
                             </Box>
                     </Grid>
                     <Grid item xs={12} md={6} lg={6} sx={{display: "flex", justifyContent: "center"}}>
-                       <Box component="img" alt="portfolio picture" src={ProfileImage}></Box>
+                       <Box component="img" alt="portfolio picture" src={ProfileImage}
+                       sx={{
+                           width: "auto",
+                           height: "35%",
+                           borderRadius: "50%",
+                           border: 10,
+                           borderColor: "#DADADA"
+                       }}
+                       ></Box>
                     </Grid>
                 </Grid>
             </GlobalBoxWrap>
