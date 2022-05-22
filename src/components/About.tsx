@@ -10,7 +10,6 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 
 //TODO 
-//double border on profile pic
 //About me sizing
 //About me mobile size
 //Download CV library?
@@ -24,7 +23,7 @@ const About: React.FC = () => {
                        <Box component="img" alt="about me picture" src={AboutImage}
                        sx={{
                            width: "auto",
-                           height: "70%",
+                           height: "65%",
                            borderRadius: "30%"
                        }}
                        ></Box>
