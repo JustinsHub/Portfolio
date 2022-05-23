@@ -1,7 +1,7 @@
 import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
+import { GlobalBoxWrap, GlobalFade, GlobalSubTitle } from "../styles/globalMUI";
 import AboutImage from '../styles/images/AboutImage.png'
 import DownloadIcon from '@mui/icons-material/Download';
 
@@ -20,13 +20,14 @@ const About: React.FC = () => {
             <GlobalBoxWrap>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6} lg={6} sx={{display: "flex", justifyContent: "center"}}>
-                       <Box component="img" alt="about me picture" src={AboutImage}
-                       sx={{
-                           width: "auto",
-                           height: "65%",
-                           borderRadius: "30%"
-                       }}
-                       ></Box>
+                            <Box component="img" alt="about me picture" src={AboutImage}
+                            sx={{
+                                width: "auto",
+                                height: "65%",
+                                borderRadius: "30%"
+                            }}
+                            >
+                            </Box>
                     </Grid>
                     <Grid item xs={12} md={6} lg={6} sx={{display: "flex", justifyContent: "center"}}>
                         <Box>
