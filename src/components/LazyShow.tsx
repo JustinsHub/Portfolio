@@ -5,7 +5,8 @@ import useOnScreen from '../hooks/useOnScreen'
 
 interface LazyShowProps {
     children: any
-    coordinates: number
+    xCoordinates?: number
+    yCoordinates?: number
 }
 
 const theme = createTheme({
@@ -22,7 +23,7 @@ const theme = createTheme({
 })
 
 
-const LazyShow: React.FC<LazyShowProps> = ({children, coordinates}) => {
+const LazyShow: React.FC<LazyShowProps> = ({children, xCoordinates, yCoordinates}) => {
     const controls = useAnimation()
     const rootRef:any = useRef()
     const onScreen = useOnScreen(rootRef)
@@ -44,7 +45,7 @@ const LazyShow: React.FC<LazyShowProps> = ({children, coordinates}) => {
         <motion.div
         className={theme.palette.lazyShowDefault}
         ref={rootRef}
-        initial={{ opacity: 0, x: coordinates }}
+        initial={{ opacity: 0, x: xCoordinates, y: yCoordinates}}
         animate={controls}
         >
         {children}

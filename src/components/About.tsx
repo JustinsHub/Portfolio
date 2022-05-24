@@ -7,8 +7,6 @@ import DownloadIcon from '@mui/icons-material/Download';
 import Resume from '../files/Software Engineer Resume (Justin Zamora).pdf'
 
 
-
-
 //TODO 
 //About me sizing
 //About me mobile size
