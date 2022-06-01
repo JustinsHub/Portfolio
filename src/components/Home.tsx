@@ -103,19 +103,19 @@ const Home: React.FC = () => {
                 </HomeBackgroundImage>
             
                 <Container>
-                    <LazyShow xCoordinates={-50}>
+                    <LazyShow xCoordinates={-50} yCoordinates={0}>
                         <section>
                             <About/>
                         </section>
                     </LazyShow>
 
-                    <LazyShow xCoordinates={50}>
+                    <LazyShow xCoordinates={50} yCoordinates={0}>
                         <section>
                             <Skills/>
                         </section>
                     </LazyShow>
 
-                    <LazyShow yCoordinates={-50}>
+                    <LazyShow xCoordinates={0} yCoordinates={-50}>
                         <section>
                             <Projects/>
                         </section>

@@ -5,8 +5,8 @@ import useOnScreen from '../hooks/useOnScreen'
 
 interface LazyShowProps {
     children: any
-    xCoordinates?: number
-    yCoordinates?: number
+    xCoordinates: number
+    yCoordinates: number
 }
 
 const theme = createTheme({
