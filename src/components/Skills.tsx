@@ -1,12 +1,8 @@
 import React from "react";
-import { Button, Grid, List, Paper, Stack, Typography } from "@mui/material";
+import { Button, Grid} from "@mui/material";
 import { Box, styled } from "@mui/system";
 import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 import SkillsImage from '../styles/images/SkillsImage.png'
-
-const PaperSkills = styled(Paper)({
-    backgroundColor: "dodgerblue"
-})
 
 const ourSkills = ['JavaScript', 'TypeScript', 'Python','HTML', 'CSS', 'React', 'Node', 'Express', 'Flask', 'PostgreSQL', 'Prisma', 'Bootstrap', 'Git' ]
 

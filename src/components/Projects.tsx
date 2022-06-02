@@ -1,6 +1,6 @@
 import React from "react";
 import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
-import { Grid } from "@mui/material";
+import { Grid, Link } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -11,21 +11,7 @@ import p1 from '../styles/images/assets/p1.png'
 import p2 from '../styles/images/assets/p2.png'
 import p3 from '../styles/images/assets/p3.png'
 
-//fix the coordinates render for Y
-//hover button and display on hover -> when clicked modal preview/explain of the website and live demo button
-
-const ProjectBox = styled('img')({
-    width: '100%', 
-    borderRadius: '1rem',
-    ":hover": {
-        cursor: 'pointer',
-        // boxShadow: '0px 1px 15px #dda73b',
-        transition: 'width 0.3s ease',
-        width: "102%"
-    }
-    
-    })
-      
+  
 const Projects: React.FC = () => {
     return (
         <section>
@@ -47,17 +33,17 @@ const Projects: React.FC = () => {
                                         Pinhead Junior NFT
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        A non fungible token project based on the Blockchain. 
+                                        A production ready non fungible token project based on the Blockchain. A team of three. I worked on the front end development and marketing for this NFT. React and Typescript were used to integrate blockchain technologies for this project.
                                     </Typography>
                                     </CardContent>
                                 </CardActionArea>
                                 <CardActions>
-                                    <Button size="small" color="primary">
-                                    Live Demo
+                                    <Button size="small" sx={{color: '#dda73b'}}>
+                                        <Link href="https://pinheadnft.com/" target="_blank" underline="none" color="inherit">Live Website
+                                        </Link>
                                     </Button>
                                 </CardActions>
                             </Card>
-                                {/* <ProjectBox alt='project 1' src={p1}></ProjectBox> */}
                             </Box>
                         </Grid>
                         <Grid item xs={6} md={4}>
@@ -81,12 +67,13 @@ const Projects: React.FC = () => {
                                         </CardContent>
                                     </CardActionArea>
                                     <CardActions>
-                                        <Button size="small" color="primary">
-                                        Live Demo
+                                        <Button size="small" sx={{color: '#dda73b'}}>
+                                        <Link href="https://pickout-service.surge.sh/" target="_blank" underline="none" color="inherit">Live Demo
+                                        </Link>
+
                                         </Button>
                                     </CardActions>
                                 </Card>
-                                {/* <ProjectBox alt='project 2' src={p2}></ProjectBox> */}
                             </Box>
                         </Grid>
                         <Grid item xs={6} md={4}>
@@ -109,18 +96,15 @@ const Projects: React.FC = () => {
                                         </CardContent>
                                     </CardActionArea>
                                     <CardActions>
-                                        <Button size="small" color="primary">
-                                        Live Demo
+                                        <Button size="small" sx={{color: '#dda73b'}}>
+                                            <Link href="https://youbreakyoubuy.herokuapp.com/" target="_blank" underline="none" color="inherit">Live Demo
+                                            </Link>
                                         </Button>
                                     </CardActions>
                                 </Card>
-                                {/* <ProjectBox alt='project 3' src={p3}></ProjectBox> */}
                             </Box>
                         </Grid>
                     </Grid>
-
-
-                   
             </GlobalBoxWrap>
         </section>
     )
