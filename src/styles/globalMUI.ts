@@ -3,7 +3,7 @@ import { Box, styled } from "@mui/system"
 
 export const GlobalBoxWrap = styled(Box)({
     width: "auto",
-    height: "50%",
+    height: "100%",
 })
 
 export const GlobalSubTitle = styled(Typography)({
