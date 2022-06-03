@@ -1,5 +1,5 @@
 import { Container, Grid, Link, Paper, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -18,20 +18,26 @@ import LazyShow from "./LazyShow";
 import Footer from "./Footer";
 
 
+interface RefObject {
+    scrollIntoView: () => void
+  }
 const HomeBackgroundImage = styled(Box)({
         backgroundImage: `linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url(${HomeBackground})`,
         backgroundSize: 'cover',
         backgroundPosition: '50% 0',
 })
 
-
-
 const Home: React.FC = () => {
+    const myAbout = useRef(null)
+    const mySkills = useRef(null)
+    const myProjects = useRef(null)
+    const myContact = useRef(null)
+
     return (
         <section>
                 <HomeBackgroundImage>
                 <section>
-                    <Navbar/>
+                    <Navbar about={myAbout} projects={myProjects} skills={mySkills} contact={myContact}/>
                 </section>
                         <Container>
                             
@@ -63,7 +69,12 @@ const Home: React.FC = () => {
                                                             <EmailIcon/>
                                                             </Grid>
                                                             <Grid item>
-                                                            <Typography fontSize="14px">contactjustincodes@gmail.com</Typography>
+                                                                <Link href="mailto:contactjustincodes@gmail.com" sx={{
+                                                                    color: 'black',
+                                                                    fontSize: '14px',
+                                                                    textDecoration: 'none'
+                                                                }}>contactjustincodes@gmail.com
+                                                                </Link>
                                                             </Grid>
                                                         </Grid>
                                                     </Box>
@@ -105,26 +116,28 @@ const Home: React.FC = () => {
             
                 <Container>
                     <LazyShow xCoordinates={-50} yCoordinates={0}>
-                        <section>
+                        <section ref={myAbout}>
                             <About/>
                         </section>
                     </LazyShow>
 
                     <LazyShow xCoordinates={50} yCoordinates={0}>
-                        <section>
+                        <section ref={mySkills}>
                             <Skills/>
                         </section>
                     </LazyShow>
 
                     <LazyShow xCoordinates={0} yCoordinates={-50}>
-                        <section>
+                        <section ref={myProjects}>
                             <Projects/>
                         </section>
                     </LazyShow>
 
-                    <section>
-                        <Contact/>
-                    </section>     
+                    <LazyShow xCoordinates={0} yCoordinates={-50}>
+                        <section ref={myContact}>
+                            <Contact/>
+                        </section>     
+                    </LazyShow>
 
                     <section>
                         <Footer/>
