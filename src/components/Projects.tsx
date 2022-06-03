@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
                     <Grid container alignItems="stretch">
                         <Grid item xs={6} md={4}>
                             <Box>
-                            <Card sx={{ maxWidth: 345 }}>
+                            <Card sx={{ maxWidth: 345}}>
                                 <CardActionArea>
                                     <CardMedia
                                     component="img"
