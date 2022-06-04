@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Grid} from "@mui/material";
-import { Box, styled } from "@mui/system";
+import { Box } from "@mui/system";
 import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 import SkillsImage from '../styles/images/SkillsImage.png'
 

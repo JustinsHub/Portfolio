@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
     
              <GlobalBoxWrap sx={{textAlign: 'center'}}>
                  <Box sx={{margin: '7rem'}}>
-                    <GlobalSubTitle>Contact</GlobalSubTitle>
+                    <GlobalSubTitle>Contact Me</GlobalSubTitle>
                     <Box sx={{margin: '1rem'}}>
                         <Link href="mailto:contactjustincodes@gmail.com"
                         sx={{

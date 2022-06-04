@@ -18,9 +18,7 @@ import LazyShow from "./LazyShow";
 import Footer from "./Footer";
 
 
-interface RefObject {
-    scrollIntoView: () => void
-  }
+
 const HomeBackgroundImage = styled(Box)({
         backgroundImage: `linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url(${HomeBackground})`,
         backgroundSize: 'cover',
@@ -28,6 +26,7 @@ const HomeBackgroundImage = styled(Box)({
 })
 
 const Home: React.FC = () => {
+    const myHome = useRef(null)
     const myAbout = useRef(null)
     const mySkills = useRef(null)
     const myProjects = useRef(null)
@@ -37,10 +36,9 @@ const Home: React.FC = () => {
         <section>
                 <HomeBackgroundImage>
                 <section>
-                    <Navbar about={myAbout} projects={myProjects} skills={mySkills} contact={myContact}/>
+                    <Navbar home={myHome} about={myAbout} projects={myProjects} skills={mySkills} contact={myContact}/>
                 </section>
-                        <Container>
-                            
+                        <Container ref={myHome}>
                             <GlobalBoxWrap marginTop={20}>
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={6} lg={6} sx={{display: "flex", justifyContent: "center"}}>

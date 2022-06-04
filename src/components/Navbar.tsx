@@ -1,11 +1,9 @@
-import React, { RefObject, useState } from "react";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
+import React  from "react";
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import { styled } from "@mui/system";
-
+import { Button } from "@mui/material";
 interface NavbarProps {
+  home: any
   about: any
   projects: any
   skills: any
@@ -13,34 +11,33 @@ interface NavbarProps {
 }
 
 
-const NavbarTypography = styled(Typography)({
-    cursor: "pointer",
-    margin: "1.3rem",
+const NavbarButton = styled(Button)({
+      color: '#c29334',
+      margin: '1rem',
+      ":hover": {
+        backgroundColor: 'rgba(194, 147, 52, 0.1)'
+      }
 })
 
-const Navbar:React.FC<NavbarProps> = ({about, projects, skills, contact}) => {
-  
+const Navbar:React.FC<NavbarProps> = ({home, about, projects, skills, contact}) => {
+    const scrollHome = () => about.current.scrollIntoView({behavior: "smooth"}) 
     const scrollAbout = () => about.current.scrollIntoView({behavior: "smooth"}) 
     const scrollProjects = () => projects.current.scrollIntoView({behavior: "smooth"}) 
     const scrollSkills = () => skills.current.scrollIntoView({behavior: "smooth"}) 
     const scrollContact = () => contact.current.scrollIntoView({behavior: "smooth"}) 
 
-
-    //Have these passed in navbar and redirect to each component
   return (
-    <Box>
-        <Toolbar
+        <Toolbar 
         sx={{
-            justifyContent: "center"
+          justifyContent: "center"
         }}
         >
-          <NavbarTypography>Home</NavbarTypography>
-          <NavbarTypography id='about' onClick={scrollAbout}>About</NavbarTypography>
-          <NavbarTypography onClick={scrollSkills}>Skills</NavbarTypography>
-          <NavbarTypography onClick={scrollProjects}>Projects</NavbarTypography>
-          <NavbarTypography onClick={scrollContact}>Contact</NavbarTypography>
+          <NavbarButton>Home</NavbarButton>
+          <NavbarButton onClick={scrollAbout}>About</NavbarButton>
+          <NavbarButton onClick={scrollSkills}>Skills</NavbarButton>
+          <NavbarButton onClick={scrollProjects}>Projects</NavbarButton>
+          <NavbarButton onClick={scrollContact}>Contact</NavbarButton>
         </Toolbar>
-    </Box>
   );
 }
 
