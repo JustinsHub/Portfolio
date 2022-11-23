@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 import SkillsImage from '../styles/images/SkillsImage.png'
 
-const ourSkills = ['JavaScript', 'TypeScript', 'Python','HTML', 'CSS', 'React', 'Node', 'Express', 'Flask', 'PostgreSQL', 'Prisma', 'Bootstrap', 'Git' ]
+const ourSkills = ['JavaScript', 'TypeScript', 'Python','HTML', 'CSS', 'React', 'Node', 'Express', 'Flask', 'PostgreSQL', 'Prisma', 'Bootstrap', 'Jest', 'React Testing Library', 'Git']
 
 const Skills: React.FC = () => {
     return (

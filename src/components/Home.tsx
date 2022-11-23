@@ -71,7 +71,7 @@ const Home: React.FC = () => {
                                                                     color: 'black',
                                                                     fontSize: '14px',
                                                                     textDecoration: 'none'
-                                                                }}>contactjustincodes@gmail.com
+                                                                }}>justin.zamora.swe@gmail.com
                                                                 </Link>
                                                             </Grid>
                                                         </Grid>
@@ -87,10 +87,8 @@ const Home: React.FC = () => {
                                                         </Grid>
                                                     </Box>
 
-                                                    <Stack direction="row" spacing={4} justifyContent="center" marginTop="1rem">
-                                                        <Link href="https://www.linkedin.com/in/justincodes/" target="_blank" underline="none" color="inherit"><LinkedInIcon/></Link>
+                                                    <Stack direction="row" spacing={4} justifyContent="start" marginTop="1rem">
                                                         <Link href="https://github.com/JustinsHub" underline="none" target="_blank" color="inherit"><GitHubIcon/></Link>
-                                                        <Link href="https://www.youtube.com/c/JustinZamora" underline="none" target="_blank" color="inherit"><YouTubeIcon/></Link>
                                                     </Stack>
                                                 </Box>
                                             </Box>

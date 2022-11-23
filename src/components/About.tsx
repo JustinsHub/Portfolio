@@ -4,12 +4,8 @@ import React from "react";
 import { GlobalBoxWrap, GlobalSubTitle } from "../styles/globalMUI";
 import AboutImage from '../styles/images/AboutImage.png'
 import DownloadIcon from '@mui/icons-material/Download';
-import Resume from '../files/Software Engineer Resume (Justin Zamora).pdf'
+import Resume from '../files/Justin Zamora Resume.pdf'
 
-
-//TODO 
-//About me sizing
-//About me mobile size
 
 const About: React.FC = () => {
     return (
@@ -33,13 +29,12 @@ const About: React.FC = () => {
                             <GlobalSubTitle>About Me</GlobalSubTitle>
                                 <Box marginTop="1rem">
                                     <Typography fontSize="14px" width="75%">
-                                        Hello there. I'm Justin and I'm a software engineer based in Los Angeles. I’m also a self taught developer that transitioned to Springboard’s Software Engineering Career Track to help guide and further my skills sets and can happily call myself a full stack software engineer. 
-                                      
+                                        Hello there. I'm Justin and I'm a software engineer based in Los Angeles. I’m also a self taught developer. 
                                         With my skills, I'm able to compete within this field and be a valuable addition to the company that sees my drive and determination and decides to bring me on their team. I’m hoping to make a big impact in tech.
                                     </Typography>
                                 </Box>
                                 <Box marginTop="2rem">
-                                    <Link href={Resume} underline="none" color="inherit" target="_blank" download="Software Engineer Resume (Justin Zamora).pdf">
+                                    <Link href={Resume} underline="none" color="inherit" target="_blank" download="Justin Zamora Resume.pdf">
                                         <Button variant="contained" sx={{
                                             backgroundColor: "#dda73b",
                                             borderRadius: "5rem", 

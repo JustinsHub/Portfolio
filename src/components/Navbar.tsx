@@ -20,7 +20,7 @@ const NavbarButton = styled(Button)({
 })
 
 const Navbar:React.FC<NavbarProps> = ({home, about, projects, skills, contact}) => {
-    const scrollHome = () => about.current.scrollIntoView({behavior: "smooth"}) 
+    const scrollHome = () => home.current.scrollIntoView({behavior: "smooth"}) 
     const scrollAbout = () => about.current.scrollIntoView({behavior: "smooth"}) 
     const scrollProjects = () => projects.current.scrollIntoView({behavior: "smooth"}) 
     const scrollSkills = () => skills.current.scrollIntoView({behavior: "smooth"}) 
@@ -32,7 +32,7 @@ const Navbar:React.FC<NavbarProps> = ({home, about, projects, skills, contact}) 
           justifyContent: "center"
         }}
         >
-          <NavbarButton>Home</NavbarButton>
+          <NavbarButton onClick={scrollHome}>Home</NavbarButton>
           <NavbarButton onClick={scrollAbout}>About</NavbarButton>
           <NavbarButton onClick={scrollSkills}>Skills</NavbarButton>
           <NavbarButton onClick={scrollProjects}>Projects</NavbarButton>
